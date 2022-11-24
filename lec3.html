@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+
+    <style>
+        body{
+            padding: 24px;
+            display: grid;
+            place-content: center;
+        }
+        label{ /*строчный элемент*/
+            display: block;
+            padding-top: 16px;
+        }
+        input{
+            width: unset;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration form</h1>
+    <p>Please fill out this form</p>
+    <form action="" method="GET"> <!-- action-указываем ссылку на какой то сервер, method-метод -->
+        <!-- Screen readers - смотрит по группировкам(fieldset) -->
+        
+        <label for="search"></label>
+        <input type="search" id="search" name="search" accesskey="s">
+        
+        <label>Name</label>
+        <input type="text"> <!-- type по умолчанию text -->
+
+        <label for="surname">SurName</label> <!-- for-чтобы связать label and input -->
+        <input type="text" id="surname"> 
+
+        <label for="email">Email</label> 
+        <input type="email" id="email" required> 
+
+        <fieldset> <!-- чтобы группировать -->
+            <legend>User Info</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="fill out name" tabindex="1"> 
+    
+            <label for="surname">SurName</label> 
+            <input type="text" id="surname" name="surname" required> 
+            <!-- required-обязательное поле --> 
+    
+            <label for="email">Email</label> 
+            <input type="text" id="email" name="email" value="k.s.kairbekkyzy@mail.ru" tabindex="2">             
+        </fieldset>
+
+        <fieldset>
+            <legend>Gender</legend>
+
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender">
+
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender">
+            <!-- name должны были одинаковыми чтобы мы могли выбрать только один оз них -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Pick ur fav city</legend>
+            <select name="city" id="">
+                <option value="shymkent">Shymkent</option>
+                <option value="almaty">Almaty</option>
+                <option value="astana">Astana</option>
+                <option value="uralsk">Uralsk</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pick ur fav city</legend>
+            <select name="city" multiple>
+                <option value="shymkent">Shymkent</option>
+                <option value="almaty">Almaty</option>
+                <option value="astana">Astana</option>
+                <option value="uralsk">Uralsk</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Terms & Conditions</legend>
+
+            <label for="terms">Terms</label>
+            <input type="checkbox" name="terms" id="terms">
+
+            <label for="terms">Terms</label>
+            <input type="checkbox" name="terms" id="terms">
+            <!-- checkbox-мы можем выбрать потом убрать если передумаем -->
+        </fieldset>
+
+        <fieldset>
+            <label for="age">Age</label>
+            <input type="number" id="number" name="age" step="5" min="18" max="120">
+            
+            <label for="color">Pick ur fav color</label>
+            <input type="color" id="color" name="color" placeholder="color">
+        
+            <label for="range">Range</label>
+            <input type="range" id="range" name="range" >
+        </fieldset>
+
+        <fieldset>
+            <input list="holiday-names" id="holiday-choice" name="holiday-choice" placeholder="pick ur fav holiday">
+            <datalist id="holiday-names">
+                <option value="New Year's Day"></option>
+                <option value="Independence Day"></option>
+                <option value="Halloween"></option>
+                <option value="Thanksgiving"></option>
+                <option value="Christmas Day"></option>
+            </datalist>
+        </fieldset>
+
+        <fieldset>
+            <legend>More tags</legend>
+            <select name="country">
+                <optgroup label="USA">
+                    <option>Alabama</option>
+                    <option>Alaska</option>
+                    <option>Arizona</option>
+                </optgroup>
+                <optgroup label="Canada">
+                    <option>Alberta</option>
+                    <option>British Columbia</option>
+                    <option>Manitoba</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <label for="text">Multiline text</label>
+            <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <input type="text" inputmode="numeric" placeholder="numeric value">
+            <input type="text" inputmode="tel" placeholder="tel value">
+            <input type="text" inputmode="decimal" placeholder="decimal value">
+            <input type="text" inputmode="email" placeholder="email value">
+            <input type="text" inputmode="url" placeholder="url value">
+            <input type="text" inputmode="search" placeholder="search value">
+            <!-- inputmode - в телефоне открывает удобную, соответствующую клавиатуру -->
+        </fieldset>
+
+        <input type="submit">
+
+        <!-- у button тип автоматически submit -->
+        <button type="menu">Menu</button> <!-- надо прочитать про тип меню -->
+        <button type="reset">Reset</button> <!-- возвращает в начальное сост. -->
+        <button type="button">Click and retrive user data</button> 
+        <button>Submit</button> <!-- чтобы отправить данные на сервер -->
+    </form>
+</body>
+</html>

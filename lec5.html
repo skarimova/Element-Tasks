@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro CSS</title>
+
+    <!--internal style-->
+    <style>
+        body{
+            margin: 0;
+        }
+        p{
+            color: blue;
+        }
+        h2{
+            font-size: 12px;
+        }
+        p, h2{
+            background-color: aqua;
+        }
+        .navigation{
+            height: 50px;
+            background-color: bisque;
+            color: darkgreen;
+        }
+        .list{
+            list-style-type: circle;
+        }
+        .list li{
+            background-color: blueviolet;
+        }
+
+        /* @media(max-width: 678px){ для мобилки
+            .novigation-mobile{
+                display:block;
+            }
+        } */
+
+        #main{
+            background-color:antiquewhite;
+            /* height:100vh; */
+            margin-top: 32px;
+        }
+        .main{
+            padding:16px;
+        }
+    </style>
+
+    <!--external style-->
+    <link rel="stylesheet" href="lec5-1.css"> <!--можем создать несколько линков-->
+    <link rel="stylesheet" href="lec5-2.css">
+    <!--если есть несколько линков и они зависять друг от друга то порядок этих линков имеет значение-->
+
+    <!--
+        SPECIFITY:
+        0.!important
+        1.ALMOST INLINE
+        2.ID
+        3.CLASS, TYPE
+
+        specificity calculator
+    -->
+
+</head>
+<body>
+    <h2>dfghjk</h2>
+    <p>edfghjkrfgthjkfghnjktyuj</p>
+    <p style="color:brown; height:24px;">edfghjkrfgthjkfghnjktyuj</p>
+    <!--style внутри парагрофа является inline style-->
+
+    <nav class="navigation novigation-mobile"> <!-- class не начинается на число -->
+        <ul class="list">
+            <li style="color:beige;">item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+    </nav>
+
+    <main id="main" class="main">
+        <h1>sdfghjkl</h1>    
+    </main>
+</body>
+</html>

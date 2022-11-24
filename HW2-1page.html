@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW3-KarimovaS</title>
+
+    <style>
+        body{
+            padding: 12px;
+            display: grid;
+            place-content: center;
+        }
+        label{
+            display: block;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center">Welcome</h1>
+    <h3 style="text-align:center">Create your account</h3>
+    <form>
+        <fieldset>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" required>
+
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contactno">Contact No.</label>
+            <input type="tel" id="contactno" name="contactno" pattern="[0-9]{11}" placeholder="87474637616" required>
+
+            <label for="date">Date of Birth</label>
+            <input type="date" id="date" name="dateofbirth">
+           
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender">
+
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender">
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" id="cpnfirmpassword" name="cpnfirmpassword" required>
+
+            <label for="agreement">I accept the terms and conditions</label>
+            <input type="checkbox" id="agreement" name="agreement" required>
+        </fieldset>
+
+        <button><a href="HW2-2page.html">REGISTER</a></button>
+    </form>
+
+</body>
+
+</html>

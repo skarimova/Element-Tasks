@@ -1,0 +1,15 @@
+body{
+    scroll-behavior: smooth;
+    margin: 0;
+    background-color: blue;
+}
+
+body .btn{
+    padding: 24px;
+}
+
+.nav p{
+    color: aliceblue!important;
+} /*important лучше не использовать*/
+
+/*браузер css читает сверху вниз*/
