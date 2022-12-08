@@ -1,0 +1,68 @@
+body{
+    padding: 12px;
+}
+#title{
+    padding: 12px;
+    display: grid;
+    place-content: center;
+}
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.dl fieldset:first-child:first-line{
+    font-weight: bold;
+}
+
+.dl fieldset:last-child:first-line{
+    font-weight: bold;
+}
+
+.link:hover{
+    color:rgb(37, 35, 35);
+    text-decoration:none;
+    font-size:20px;
+}
+
+.parent {
+    display: flex;
+    background: white;
+    padding:10px;
+}
+
+.header {
+    background: rgb(150, 150, 153);
+    position: fixed;
+    color: black;
+    padding: 10px;
+    width: 1269px;
+    top: 0;
+}
+
+.sidebar{
+    grid-area:aside;
+}
+.content{
+    grid-area:content;
+}
+
+.sidebar {
+    background: #fa923f;
+    color: white;
+    padding: 10px;
+    top: 0;
+}
+
+.main {
+    background: rgb(105, 105, 109);
+    color: white;
+    width: 2000px;
+    padding: 10px;
+}

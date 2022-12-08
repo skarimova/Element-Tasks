@@ -1,0 +1,124 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+::selection{
+    color: blanchedalmond; /*ПРИ ВЫДЕЛЕНИИ МЕНЯЕТСЯ ЦВЕТ*/
+}
+
+.main{
+    display:grid;
+    grid-template-areas: 
+        "aside content";
+        gap: 24px;
+
+}
+
+.header{
+    /*position:fixed;*/
+    position:sticky;
+    top:0;
+    height: 60px;
+    background-color: aquamarine; 
+}
+
+.sidebar{
+    grid-area:aside;
+}
+
+.content{
+    grid-area:content;
+}
+
+.content article:target{
+    border: 1px dotted red;
+}
+
+.content article:target h2{
+    color:blue;
+    outline: 1px solid currentColor;
+}
+
+.link:hover{
+    color:red;
+    text-decoration:none;
+    font-size:24px;
+}
+
+.login-input:focus{
+    outline:none;
+}
+
+label{
+    display:block;
+}
+
+.article p:first-child::first-line{
+    color:aqua;
+}
+
+.article p:last-child::first-letter{
+    font-size:40px;
+    color:var(--primary-color); /*берем цвет с lec6-variables.css
+                                var - принимает css переменные, css переменные начинаются на --*/
+}
+
+.empty:empty{ /*применяются пустым секциям*/
+    height:100px;
+    background-color:var(--primary-color, #FFFFFF); /*если нет переменного --primary-color мы берем цвет #FFFFFF* = FALLBACK*/
+}
+
+.custom-attribute{
+    position: relative;
+}
+
+.custom-attribute a[data-tooltip]::after{
+    content: attr(data-tooltip);
+    color:blueviolet;
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+}
+
+.custom-attribute a[data-tooltip]:hover:after{
+    transform: scale(1);
+    background: black;
+    border-radius: 100vmax;
+    padding: 8px;
+    top: 0;
+    left: 100px;
+}
+
+.awesome-paragraph::before{ /*before, after можно использовать ко всем элементам кроме img*/
+    content: 'HELLO '; /*сюда можно поставить картинку или ссылку или тд*/
+    color: brown;
+    display: block;
+}
+
+.awesome-paragraph::after{
+    content: ' GOOD BUY';
+    color: brown;
+}
+
+blockquote{
+    --padding:40px;
+    padding: var(--padding);
+}
+
+blockquote:hover{
+    --padding:24px;
+}
+
+blockquote::before{
+    content: open-quote;
+}
+
+blockquote::before{
+    content: close-quote;
+}
+
+
+

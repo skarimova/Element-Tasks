@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class/elements</title>
+    
+    <link rel="stylesheet" href="lec6-reset.css">
+    <link rel="stylesheet" href="lec6-variables.css">
+    <link rel="stylesheet" href="lec6-main.css">
+</head>
+<body>
+    <header class="header"></header>
+    <main class="main">
+        <h1>Pseudo class</h1> <!--меняют состояние элемента например при наведении-->
+
+        <pre><code>
+            selector:hover {
+                color:red
+            }
+        </code></pre>
+
+        <a href="http.example.com" class="link">Example</a> <!--при наведении на текст цвет меняется-->
+
+        <h2>Pseudo elements</h2>
+
+        <article class="article">
+            <p>FFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFFFFF
+                FFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF FFFFFFFFFFF
+            </p>
+            <p>DDDDDDDDDDDDDD DDDDDDDDDDDDDDDDDD DDDDDDDDDDDDDDDDD</p>
+        </article>
+
+        <section class="empty"></section>
+        <section class="empty">
+            <h2>Not empty</h2>
+        </section>
+
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#first">Section 1</a></li>
+                <li><a href="#second">Section 2</a></li>
+                <li><a href="#third">Section 3</a></li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <article id="first">
+                <h2>Section 1</h2>
+                <p>CCCCCCCCC CCCCCCCCCCCC CCCCCCCCC</p>
+            </article>
+            <article id="second">
+                <h2>Section 2</h2>
+                <p>CCCCCCCCC CCCCCCCCCCCC CCCCCCCCC</p>
+            </article>
+            <article id="third">
+                <h2>Section 3</h2>
+                <p>CCCCCCCCC CCCCCCCCCCCC CCCCCCCCC</p>
+            </article>
+        </div>
+
+        <blockquote>EEEEEEEEEE EEEEEEEEEEEEEE EEEEEEEEEEEEEE
+            EEEEEEEEEEEE EEEEEEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEEEEEE
+            EEEEEEEEEEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE
+        </blockquote>
+        <p class="awesome-paragraph">AAAAA AAAAA AAA AAAA AAAAA AAAAA AAAAAA AAA AAAAAAA</p>
+        <p class="custom-attribute">BBBBBBBBBBBBB BBBBBBBBB BBB <a href="#" data-tooltip="a nice tooltip">bbbbbb</a> BBBBBBBBBBBB BBBBBBBB</p>
+    
+    </main>
+
+    <form>
+        <label for="login">Login</label>
+        <input type="text" id="login" class="login-input">
+    </form>
+</body>
+</html>

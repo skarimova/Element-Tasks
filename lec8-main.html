@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!--
+    1. Mobile First
+    2. Desktop First
+-->
+
+    <style>
+
+        /** {*/
+        /*    outline: 1px solid #7b1515;*/
+        /*}*/
+
+        /*html {*/
+        /*    padding: 100px;*/
+        /*}*/
+        /*:root {} === html*/
+
+        :root {
+            --my-loved-color: red;
+            --_____primary-color: #7b1515;
+            --______header-padding: 100px;
+            --primary-color-400: #FFFFFF;
+
+
+            --bg-color: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+
+
+            /*background-color: var();*/
+        }
+
+        @media (prefers-color-scheme: dark) {
+            /*:root {*/
+            /*    --bg-color: black;*/
+            /*}*/
+            /*.items {*/
+            /*    !*back*!*/
+            /*}*/
+            /*body {*/
+            /*    background-color: black;*/
+            /*}*/
+            /*span {*/
+            /*    */
+            /*}*/
+            /*p {*/
+            /*    */
+            /*}*/
+            /*a {*/
+            /*    color: #9b3131;*/
+            /*}*/
+        }
+
+        @media (prefers-color-scheme: light) {
+
+        }
+
+        .items {
+            /*background: #3b3b4f;*/
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        .item {
+            /*background: #f5f6f7;*/
+            border: 1px solid darkred;
+            font-size: 24px;
+            flex-basis: 100%;
+            background-color: var(--bg-color);
+        }
+
+        /*header {*/
+        /*    --header-padding: 24px;*/
+
+        /*    position: fixed;*/
+        /*    left: 0;*/
+        /*    right: 0;*/
+        /*    top: 0;*/
+        /*    background-color: #b3b3b3;*/
+        /*    padding: var(--header-padding);*/
+        /*}*/
+
+        /*@media (max-width: 500px) {*/
+        /*    header {*/
+        /*        --header-padding: 5px;*/
+        /*    }*/
+        /*}*/
+
+        /*.item:first-of-type {*/
+        /*    opacity: 0;*/
+        /*}*/
+
+        /*.item:first-of-type:hover {*/
+        /*    opacity: 1;*/
+        /*}*/
+
+        /*.item:nth-of-type(2) {*/
+        /*    display: none;*/
+        /*}*/
+
+        /*.item:nth-of-type(2):hover {*/
+        /*    display: none;*/
+        /*}*/
+
+        @media (max-width: 500px) and (min-width: 300px) {
+            .items {
+                flex-direction: column;
+            }
+        }
+
+        /*@media (300px < width < 500px) {*/
+        /*    */
+        /*}*/
+
+        /*@media (min-width: 500px) {*/
+        /*    .items {*/
+        /*        flex-direction: row;*/
+        /*    }*/
+        /*}*/
+
+        /*@media print {*/
+        /*    */
+        /*}*/
+
+        /*@media (orientation: portrait) {*/
+        /*    */
+        /*}*/
+
+        /*@media (orientation: landscape) {*/
+
+        /*}*/
+
+        /*@media (prefers-color-scheme: dark) {*/
+        /*    :root {*/
+        /*        --dark: #falkfas;*/
+        /*    }*/
+        /*}*/
+
+        /*@media (prefers-color-scheme: light) {*/
+        /*    :root {*/
+        /*        --dark: #falkfas;*/
+        /*    }*/
+        /*}*/
+
+        /*@media (prefers-reduced-motion: reduce) {*/
+        /*    */
+        /*}*/
+
+    </style>
+    <title>Media Query</title>
+</head>
+<body>
+<header>HEADER</header>
+    <div class="items">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>

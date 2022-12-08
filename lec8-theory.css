@@ -1,0 +1,27 @@
+body {
+    border: 50px solid darkred;
+    height: 600px;
+    margin: 0;
+    padding: 36px;
+    position: static;
+}
+
+main {
+    height: 500px;
+    outline: 20px solid greenyellow;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    padding: 36px;
+}
+
+div {
+    border: 5px solid orangered;
+}
+
+div:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;;
+    right: 0;
+}

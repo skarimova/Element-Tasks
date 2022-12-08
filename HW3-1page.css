@@ -1,0 +1,32 @@
+body{
+   /* padding: 12px;*/
+    display: grid;
+    place-content: center;
+}
+
+label{
+    display: block;
+    padding-top: 10px;
+}
+
+.password{
+    position: relative;
+}
+.password a[data-tooltip]::after{
+    content: attr(data-tooltip);
+    color: black;
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+}
+
+.password a[data-tooltip]:hover:after{
+    transform: scale(1);
+    background: white;
+    border-style:ridge;
+    border-color: gray;
+    padding: 8px;
+    left: 100px;
+}
